@@ -12,12 +12,40 @@
       "item": [
         {
           "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "pm.environment.set(\"BEARER_ACCESS_TOKEN\",response.data.access_token);\r",
+                  "pm.environment.set(\"BEARER_REFRESH_TOKEN\",response.data.refresh_token);\r",
+                  "console.log(\"✅ Tokens saved to environment variables : ACCESS_TOKEN & REFRESH_TOKEN\");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
           "request": {
             "method": "POST",
-            "header": [],
+            "header": [
+              {
+                "key": "x-forwarded-for",
+                "value": "41.45.210.10",
+                "type": "text"
+              },
+              {
+                "key": "x-forwarded-for",
+                "value": "14.215.177.38",
+                "type": "text",
+                "disabled": true
+              }
+            ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"nada@gmail.com\",\r\n    \"password\": \"11234\"\r\n}",
+              "raw": "{\r\n    \"email\":\"zatcyushztxvrbdvhq@fxavaj.com\",\r\n    \"password\": \"Galal@177\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -25,12 +53,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/login",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/login",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "login"
@@ -46,7 +76,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"nhsn55988@gmail.com\",\r\n    \"otp\":597714\r\n}",
+              "raw": "{\r\n    \"email\": \"nhsn55988@gmail.com\",\r\n    \"otp\": 343616\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -54,12 +84,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/verify-otp",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/verify-otp",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "verify-otp"
@@ -83,12 +115,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/resend-otp",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/resend-otp",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "resend-otp"
@@ -104,7 +138,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{    \r\n    \"fullName\": \"Nody Ali\",\r\n    \"email\": \"nody@gmail.com\",\r\n    \"password\": \"Galal@177\",\r\n    \"confirmPassword\":\"Galal@177\",\r\n    \"phone\":\"+201234679876\"\r\n}",
+              "raw": "{    \r\n    \"fullName\": \"Nader Ali\",\r\n    \"email\": \"zatcyushztxvrbdvhq@fxavaj.com\",\r\n    \"password\": \"Galal@177\",\r\n    \"confirmPassword\":\"Galal@177\",\r\n    \"phone\":\"+201234679876\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -112,12 +146,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/signup/?lang=ar",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/signup/?lang=ar",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "signup",
@@ -158,12 +194,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/user/logout",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/logout",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "user",
                 "logout"
@@ -179,7 +217,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{    \r\n    \"email\":\"prvgmzfejlximxrgfp@nesopf.com\"\r\n    ,\"otp\":\"569921\"\r\n}",
+              "raw": "{    \r\n    \"email\": \"zatcyushztxvrbdvhq@fxavaj.com\"\r\n    ,\"otp\":\"204239\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -187,12 +225,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/confirm-email",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/confirm-email",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "confirm-email"
@@ -208,7 +248,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{    \r\n    \"email\": \"sdxxcwegxgwoksjkcq@fxavaj.com\"\r\n}",
+              "raw": "{    \r\n   \"email\": \"jvamnyzruuhaqfstpo@fxavaj.com\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -216,12 +256,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/resend-confirm-email",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/resend-confirm-email",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "resend-confirm-email"
@@ -237,7 +279,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{    \r\n    \"email\":\"jvamnyzruuhaqfstpo@fxavaj.com\"\r\n}",
+              "raw": "{    \r\n    \"email\":\"nhsn55988@gmail.com\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -245,12 +287,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/request-forget-password-code",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/request-forget-password-code",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "request-forget-password-code"
@@ -266,7 +310,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\":\"nhsn55988@gmail.com\",\r\n    \"otp\":\"243400\",\r\n    \"password\":\"Werd@1345\"\r\n}",
+              "raw": "{\r\n    \"email\":\"nhsn55988@gmail.com\",\r\n    \"otp\": \"380006\",\r\n    \"password\":\"Werd@1340\",\r\n    \"confirmPassword\":\"Werd@1340\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -274,12 +318,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/reset-forget-password-code",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/reset-forget-password-code",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "reset-forget-password-code"
@@ -295,7 +341,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\":\"nhsn55988@gmail.com\",\r\n    \"otp\": \"767502\"\r\n}",
+              "raw": "{\r\n    \"email\":\"nhsn55988@gmail.com\",\r\n    \"otp\": \"562120\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -303,12 +349,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/auth/verify-forget-password-code",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/verify-forget-password-code",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "auth",
                 "verify-forget-password-code"
@@ -342,12 +390,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/user/password",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/password",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "user",
                 "password"
@@ -399,26 +449,54 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"body\":\"hello👌\",\r\n    \"attachments\":[],\r\n    \"recieverId\":\"698b894efd639ee7be68b0f3\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
                 }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "disabled": true
               }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "attachments",
+                  "type": "file",
+                  "uuid": "f1e7e99d-4151-4656-ac0c-9af582f01ed7",
+                  "src": "/C:/Users/pc/Pictures/Screenshots/Screenshot (245).png"
+                },
+                {
+                  "key": "content",
+                  "value": "hello👌",
+                  "type": "text",
+                  "uuid": "5a71f566-5ce0-4cd6-80ce-367d9713901e"
+                }
+              ]
             },
             "url": {
-              "raw": "http://localhost:3000/message",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/message/69b1e759d76f06767f70339b",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
-                "message"
+                "message",
+                "69b1e759d76f06767f70339b"
               ]
             },
             "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -444,11 +522,21 @@
             }
           ],
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -456,15 +544,17 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/message/698b894efd639ee7be68b0f3",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/message/69b2e36fbbc3dca122c04525",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "message",
-                "698b894efd639ee7be68b0f3"
+                "69b2e36fbbc3dca122c04525"
               ]
             },
             "description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -474,8 +564,39 @@
         {
           "name": "get all messages",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
-            "header": []
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OThjOWYzMjlhYjcyNzdjZDFiOWJmYjYiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzIwNTQ0MjIsImV4cCI6MTc3MjA1NjIyMiwiYXVkIjpbIndlYiIsIm1vYmlsZSJdLCJpc3MiOiJodHRwLy9sb2NhbGhvc3Q6MzAwMCJ9.u7-iYmpbePZhVYhn8O3NjKWSfvhaogfuCPSXuYzA15w",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/message/list",
+              "protocol": "http",
+              "host": [
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
+              ],
+              "path": [
+                "message",
+                "list"
+              ]
+            }
           },
           "response": []
         },
@@ -495,9 +616,13 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{Base_URL}}/message/69b2d85c5a8be02b482c5e86",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/message/69b2d85c5a8be02b482c5e86",
+              "protocol": "http",
               "host": [
-                "{{Base_URL}}"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
               "path": [
                 "message",
@@ -514,9 +639,50 @@
       "item": [
         {
           "name": "profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
-            "header": []
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWExOTdmNDUzYjUzZGQ3MjA3N2ZkY2MiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzIyODE1NTMsImV4cCI6MTc3MjI4MzM1MywiYXVkIjpbMCwxXSwiaXNzIjoiaHR0cC8vbG9jYWxob3N0OjMwMDAifQ.mclm9GsPdJrkGOJNMI7XNCnAVfI93s3yQvJJcKhIXE8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"nhsn55988@gmail.com\",\r\n    \"otp\":597714\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user",
+              "protocol": "http",
+              "host": [
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
+              ],
+              "path": [
+                "user"
+              ]
+            }
           },
           "response": []
         },
@@ -554,7 +720,17 @@
         {
           "name": "delete profile Image",
           "request": {
-            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
             "header": [],
             "body": {
               "mode": "formdata",
@@ -563,17 +739,20 @@
                   "key": "attachment",
                   "type": "file",
                   "uuid": "6fe75c68-9fed-4205-a445-0d4fe8227a6d",
-                  "src": "/C:/Users/pc/Pictures/Screenshots/Screenshot (244).png"
+                  "src": "/C:/Users/pc/Pictures/Screenshots/Screenshot (244).png",
+                  "disabled": true
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:3000/user/profile-image",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/profile-image",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "user",
                 "profile-image"
@@ -585,16 +764,77 @@
         {
           "name": "rotate-token",
           "request": {
-            "method": "GET",
-            "header": []
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWE3NjZmYzcxMzU3ZTI4MzNiYTJjNjUiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzMwODEzMDYsImV4cCI6MTgwNDYxNzMwNiwiYXVkIjpbMSwwXSwiaXNzIjoiaHR0cC8vbG9jYWxob3N0OjMwMDAiLCJqdGkiOiI2NGIyMzM0MS0xNzA2LTRkOGQtYjA2YS00MDUxZTQ2MDc4MDkifQ.Ba59cMn8Gg2gHcaCMbW1kNUa_9FXu9bHGf73jNC2V3c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWExOTdmNDUzYjUzZGQ3MjA3N2ZkY2MiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzIyMDQ4NzksImV4cCI6MTgwMzc0MDg3OSwiYXVkIjpbMSwxXSwiaXNzIjoiaHR0cC8vbG9jYWxob3N0OjMwMDAifQ.Ghhr28aXy4cntm8I5q40OP0b6uJjvteRRFOZfaS4b_8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/rotate-token",
+              "protocol": "http",
+              "host": [
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
+              ],
+              "path": [
+                "user",
+                "rotate-token"
+              ]
+            }
           },
           "response": []
         },
         {
           "name": "shared profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
-            "header": []
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"nada@gmail.com\",\r\n    \"password\": \"11234\"\r\n}"
+            },
+            "url": {
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/",
+              "protocol": "http",
+              "host": [
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
+              ],
+              "path": [
+                "user",
+                ""
+              ]
+            }
           },
           "response": []
         },
@@ -618,12 +858,14 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:3000/uploads/users/profile/edfa39ad-79a8-4e8f-944f-62c601e5c6e0_Screenshot (247).png",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/uploads/users/profile/edfa39ad-79a8-4e8f-944f-62c601e5c6e0_Screenshot (247).png",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "uploads",
                 "users",
@@ -642,7 +884,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWE3NjZmYzcxMzU3ZTI4MzNiYTJjNjUiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzI4ODIzMTgsImV4cCI6MTc3Mjg4NDExOCwiYXVkIjpbMCwwXSwiaXNzIjoiaHR0cC8vbG9jYWxob3N0OjMwMDAifQ.1knOiClPZV50dyH4FI8mtZhxLavDofyDMsCk1wrjEWM",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWI3ZjczNGFiMzgxMzUxYTQzMmJmZDgiLCJleHRyYSI6MjUwLCJpYXQiOjE3NzM2NjU2MzAsImV4cCI6MTc3MzY2NzQzMCwiYXVkIjpbMCwwXSwiaXNzIjoiaHR0cC8vbG9jYWxob3N0OjMwMDAiLCJqdGkiOiJkYzI0MzJlNy1lOWZhLTRlYzgtOTRhMy02ZDVmNzBhMzUzOTUifQ.GRwTXeVnnt3v4ZEI-qY5UElGCrO1GK3xgZRM3N8ZHio",
                   "type": "string"
                 }
               ]
@@ -657,10 +899,9 @@
                   "type": "file",
                   "uuid": "6fe75c68-9fed-4205-a445-0d4fe8227a6d",
                   "src": [
-                    "/C:/Users/pc/Pictures/Screenshots/Screenshot (247).png",
-                    "/C:/Users/pc/Pictures/Screenshots/Screenshot (252).png"
-                  ],
-                  "disabled": true
+                    "/C:/Users/pc/Pictures/Screenshots/Screenshot (238).png",
+                    "/C:/Users/pc/Pictures/Screenshots/Screenshot (246).png"
+                  ]
                 },
                 {
                   "key": "",
@@ -672,12 +913,14 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:3000/user/profile-cover-image",
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/profile-cover-image",
               "protocol": "http",
               "host": [
-                "localhost"
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "user",
                 "profile-cover-image"
@@ -689,49 +932,66 @@
         {
           "name": "total profile visit",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{BEARER_ACCESS_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": {
+              "raw": "http://saraha-node-app-online.eu-4.evennode.com/user/admin/total-profile-visits",
+              "protocol": "http",
+              "host": [
+                "saraha-node-app-online",
+                "eu-4",
+                "evennode",
+                "com"
+              ],
+              "path": [
+                "user",
+                "admin",
+                "total-profile-visits"
+              ]
+            }
           },
           "response": []
         }
       ]
     },
     {
-      "name": "http://localhost:3000///C:/Users/pc/Pictures/node.js/saraha_app/code/src/middleware/authentication.middleware.js:19:40\\n",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000///C:/Users/pc/Pictures/node.js/saraha_app/code/src/middleware/authentication.middleware.js:19:40\\n",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "",
-            "",
-            "C:",
-            "Users",
-            "pc",
-            "Pictures",
-            "node.js",
-            "saraha_app",
-            "code",
-            "src",
-            "middleware",
-            "authentication.middleware.js:19:40",
-            "n"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "verify-forget-password-code",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"email\":\"nhsn55988@gmail.com\"\r\n    ,\"otp\":\"767502\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://saraha-node-app-online.eu-4.evennode.com/auth/verify-forget-password-code",
+          "protocol": "http",
+          "host": [
+            "saraha-node-app-online",
+            "eu-4",
+            "evennode",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "verify-forget-password-code"
+          ]
+        }
       },
       "response": []
     }
