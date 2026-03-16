@@ -1,0 +1,5 @@
+// export {default as authRouter} from './auth/auth.controller.js'
+// export {default as userRouter} from './user/user.controller.js'
+export * from './user/index.js'
+export * from './auth/index.js'
+export * from './message/index.js' 

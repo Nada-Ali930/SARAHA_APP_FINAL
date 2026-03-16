@@ -1,0 +1,3 @@
+export const successResponse = async({res,message="done",status=200,data=undefined})=>{
+   return res.status(status).json({status,message,data})
+}
